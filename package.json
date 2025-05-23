@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "private": "true",
+  "version": "0.0.0",
+  "port": 3000,
+  "scripts": {
+    "dev": "ts-node-dev --rs ./src/index.ts",
+    "build": "rimraf ./dist && --build ./tsconfig.json",
+    "start": "node ./dist/index.js",
+    "prettify": "prettier --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}'"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.1.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nvm": "^0.0.4"
+  }
+}
